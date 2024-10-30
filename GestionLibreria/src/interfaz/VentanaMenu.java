@@ -1,0 +1,128 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
+package interfaz;
+
+public class VentanaMenu extends javax.swing.JFrame {
+
+    public VentanaMenu() {
+        initComponents();
+    }
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        regEditoriales = new javax.swing.JMenuItem();
+        regGeneros = new javax.swing.JMenuItem();
+        regAutores = new javax.swing.JMenuItem();
+        regLibros = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        consLibros = new javax.swing.JMenuItem();
+        consVentas = new javax.swing.JMenuItem();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gestión de Librerías - Realizado por Leandro Chiurchiu (286847) y Juan Martín Lasserre (289139)");
+
+        jMenu1.setText("Registros");
+
+        regEditoriales.setText("Editoriales");
+        regEditoriales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regEditorialesActionPerformed(evt);
+            }
+        });
+        jMenu1.add(regEditoriales);
+
+        regGeneros.setText("Generos");
+        jMenu1.add(regGeneros);
+
+        regAutores.setText("Autores");
+        regAutores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regAutoresActionPerformed(evt);
+            }
+        });
+        jMenu1.add(regAutores);
+
+        regLibros.setText("Libros");
+        jMenu1.add(regLibros);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Ventas");
+
+        jMenuItem1.setText("Registro de Ventas");
+        jMenu2.add(jMenuItem1);
+
+        jMenuItem2.setText("Anular Ventas");
+        jMenu2.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Consultas");
+
+        consLibros.setText("Consultar Libros");
+        jMenu3.add(consLibros);
+
+        consVentas.setText("Consultar Ventas");
+        consVentas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consVentasActionPerformed(evt);
+            }
+        });
+        jMenu3.add(consVentas);
+
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 727, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 518, Short.MAX_VALUE)
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void regAutoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regAutoresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_regAutoresActionPerformed
+
+    private void consVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consVentasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_consVentasActionPerformed
+
+    private void regEditorialesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regEditorialesActionPerformed
+        VentanaAgregarEditorial vent = new VentanaAgregarEditorial();
+        vent.setVisible(true);
+    }//GEN-LAST:event_regEditorialesActionPerformed
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem consLibros;
+    private javax.swing.JMenuItem consVentas;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem regAutores;
+    private javax.swing.JMenuItem regEditoriales;
+    private javax.swing.JMenuItem regGeneros;
+    private javax.swing.JMenuItem regLibros;
+    // End of variables declaration//GEN-END:variables
+}
