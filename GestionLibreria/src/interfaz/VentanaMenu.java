@@ -41,6 +41,11 @@ public class VentanaMenu extends javax.swing.JFrame {
         jMenu1.add(regEditoriales);
 
         regGeneros.setText("Generos");
+        regGeneros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regGenerosActionPerformed(evt);
+            }
+        });
         jMenu1.add(regGeneros);
 
         regAutores.setText("Autores");
@@ -106,9 +111,14 @@ public class VentanaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_consVentasActionPerformed
 
     private void regEditorialesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regEditorialesActionPerformed
-        VentanaAgregarEditorial vent = new VentanaAgregarEditorial();
+        VentanaEditorial vent = new VentanaEditorial();
         vent.setVisible(true);
     }//GEN-LAST:event_regEditorialesActionPerformed
+
+    private void regGenerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regGenerosActionPerformed
+        VentanaGenero vent = new VentanaGenero();
+        vent.setVisible(true);
+    }//GEN-LAST:event_regGenerosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
