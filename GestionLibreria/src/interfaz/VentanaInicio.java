@@ -1,8 +1,10 @@
 package interfaz;
+import dominio.*;
 
 public class VentanaInicio extends javax.swing.JFrame {
 
-    public VentanaInicio() {
+    public VentanaInicio(Sistema sys) {
+        modelo = sys;
         initComponents();
         sistemaVac.setSelected(true);
     }
@@ -18,6 +20,7 @@ public class VentanaInicio extends javax.swing.JFrame {
         iniciar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Inicio");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("¿Cómo quiere iniciar el programa?");
@@ -91,11 +94,11 @@ public class VentanaInicio extends javax.swing.JFrame {
 
     private void iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarActionPerformed
         if(ultDatos.isSelected()){
-            VentanaMenu ventMen = new VentanaMenu();
+            VentanaMenu ventMen = new VentanaMenu(modelo);
             ventMen.setVisible(true);
         }
         if(sistemaVac.isSelected()){
-            VentanaMenu ventMen = new VentanaMenu();
+            VentanaMenu ventMen = new VentanaMenu(modelo);
             ventMen.setVisible(true);
         }
         this.dispose();
@@ -113,4 +116,5 @@ public class VentanaInicio extends javax.swing.JFrame {
     private javax.swing.JRadioButton sistemaVac;
     private javax.swing.JRadioButton ultDatos;
     // End of variables declaration//GEN-END:variables
+    Sistema modelo;
 }

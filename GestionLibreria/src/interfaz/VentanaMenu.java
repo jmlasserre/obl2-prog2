@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package interfaz;
+import dominio.*;
 
 public class VentanaMenu extends javax.swing.JFrame {
 
-    public VentanaMenu() {
+    public VentanaMenu(Sistema sys) {
+        modelo = sys;
         initComponents();
     }
     
@@ -111,12 +109,12 @@ public class VentanaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_consVentasActionPerformed
 
     private void regEditorialesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regEditorialesActionPerformed
-        VentanaEditorial vent = new VentanaEditorial();
+        VentanaEditorial vent = new VentanaEditorial(modelo);
         vent.setVisible(true);
     }//GEN-LAST:event_regEditorialesActionPerformed
 
     private void regGenerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regGenerosActionPerformed
-        VentanaGenero vent = new VentanaGenero();
+        VentanaGenero vent = new VentanaGenero(modelo);
         vent.setVisible(true);
     }//GEN-LAST:event_regGenerosActionPerformed
 
@@ -135,4 +133,5 @@ public class VentanaMenu extends javax.swing.JFrame {
     private javax.swing.JMenuItem regGeneros;
     private javax.swing.JMenuItem regLibros;
     // End of variables declaration//GEN-END:variables
+    Sistema modelo;
 }

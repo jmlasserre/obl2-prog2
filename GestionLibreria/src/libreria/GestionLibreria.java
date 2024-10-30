@@ -7,9 +7,9 @@ import interfaz.*;
 public class GestionLibreria {
 
     public static void main(String[] args) {
-        VentanaInicio vent = new VentanaInicio();
-        vent.setVisible(true);
         Sistema sys = new Sistema();
+        VentanaInicio vent = new VentanaInicio(sys);
+        vent.setVisible(true);
     }
     
 }
