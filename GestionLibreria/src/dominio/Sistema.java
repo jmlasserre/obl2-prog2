@@ -25,6 +25,14 @@ public class Sistema {
         return listaEditoriales;
     }
     
+    public ArrayList<String> getNombresEditorial(){
+        ArrayList<String> listaNombresEditoriales = new ArrayList<>();
+        for(Editorial edit : this.listaEditoriales){
+            listaNombresEditoriales.add(edit.getNombre());
+        }
+        return listaNombresEditoriales;
+    }
+    
     public void registrarAutor(String nombre, String nacionalidad){
         autores.put(nombre, nacionalidad);
         Autor aut = new Autor(nombre, nacionalidad);

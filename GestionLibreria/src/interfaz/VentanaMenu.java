@@ -55,6 +55,11 @@ public class VentanaMenu extends javax.swing.JFrame {
         jMenu1.add(regAutores);
 
         regLibros.setText("Libros");
+        regLibros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regLibrosActionPerformed(evt);
+            }
+        });
         jMenu1.add(regLibros);
 
         jMenuBar1.add(jMenu1);
@@ -118,6 +123,11 @@ public class VentanaMenu extends javax.swing.JFrame {
         VentanaGenero vent = new VentanaGenero(modelo);
         vent.setVisible(true);
     }//GEN-LAST:event_regGenerosActionPerformed
+
+    private void regLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regLibrosActionPerformed
+        VentanaLibro vent = new VentanaLibro(modelo);
+        vent.setVisible(true);
+    }//GEN-LAST:event_regLibrosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
