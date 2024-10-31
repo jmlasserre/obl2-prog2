@@ -1,3 +1,5 @@
+// Leandro Chiurchiu (286847) y Juan Martí­n Lasserre (289139)
+// M2B
 package interfaz;
 import dominio.*;
 
@@ -138,8 +140,13 @@ public class VentanaMenu extends javax.swing.JFrame {
         VentanaLibro vent = new VentanaLibro(modelo);
         vent.setVisible(true);
     }//GEN-LAST:event_regLibrosActionPerformed
-                                 
 
+
+    private void regLibrosActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        VentanaLibro vent = new VentanaLibro(modelo);
+        vent.setVisible(true);
+    }                                         
+                                
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem consLibros;

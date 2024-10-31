@@ -1,3 +1,5 @@
+// Leandro Chiurchiu (286847) y Juan Martí­n Lasserre (289139)
+// M2B
 package interfaz;
 import dominio.*;
 import javax.swing.table.DefaultTableModel;
@@ -13,7 +15,7 @@ public class VentanaEditorial extends javax.swing.JFrame {
     }
     
     public void recargarTabla(){
-        for(Editorial editorial : modelo.getEditorial()){
+        for (Editorial editorial : modelo.getEditorial()){
             String[] fila = {editorial.getNombre() , editorial.getPais()};
             tabla.addRow(fila);
         }

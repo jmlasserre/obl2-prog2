@@ -33,6 +33,18 @@ public class Sistema {
         return listaEditoriales;
     }
     
+    public String[] autoresPorGenero(String genero){
+        ArrayList<String> generosAutor = new ArrayList<>();
+        for (Autor aut : this.listaAutores){
+            for (int i = 0; i < aut.getGeneros().length; i++){
+                if (aut.getGeneros()[i].trim().equalsIgnoreCase(genero)){
+                    generosAutor.add(aut.getGeneros()[i]);
+                }
+            }
+        }
+        return (String[]) generosAutor.toArray();
+    }
+    
     public void registrarAutor(String nombre, String nacionalidad, ArrayList<String> listaGeneros){
         autores.put(nombre, nacionalidad);
         Autor aut = new Autor(nombre, nacionalidad, listaGeneros);
