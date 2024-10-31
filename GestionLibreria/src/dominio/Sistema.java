@@ -25,9 +25,9 @@ public class Sistema {
         return listaEditoriales;
     }
     
-    public void registrarAutor(String nombre, String nacionalidad){
+    public void registrarAutor(String nombre, String nacionalidad, ArrayList<String> listaGeneros){
         autores.put(nombre, nacionalidad);
-        Autor aut = new Autor(nombre, nacionalidad);
+        Autor aut = new Autor(nombre, nacionalidad, listaGeneros);
         this.listaAutores.add(aut);
     }
     

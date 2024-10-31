@@ -65,7 +65,7 @@ public class VentanaAutor extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(787, 143, 490, 439);
+        jPanel1.setBounds(787, 143, 0, 0);
 
         cancelar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         cancelar.setText("Cancelar");
@@ -141,11 +141,15 @@ public class VentanaAutor extends javax.swing.JFrame {
     }//GEN-LAST:event_nombreActionPerformed
 
     private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
+        ArrayList<String> listaGeneros = new ArrayList<>();
+        for (int i = 0; i < listaGen.getModel().getSize(); i++){
+            listaGeneros.add((String) listaGen.getModel().getElementAt(i));
+        }
         if (nombre.getText().trim().length() == 0 || nacionalidad.getText().trim().length() == 0){
             JOptionPane.showMessageDialog(null, "Uno o más campos están vacíos. Compruebe que no estén vacíos y vuelva a intentarlo.", "Error", 
                     JOptionPane.ERROR_MESSAGE);
         } else if (modelo.autorEsUnico(nombre.getText())){
-            modelo.registrarAutor(nombre.getText(), nacionalidad.getText());
+            modelo.registrarAutor(nombre.getText(), nacionalidad.getText(), listaGeneros);
             recargarTabla();
         } else {
             int resp = JOptionPane.showConfirmDialog(null, "El autor ya existe. ¿Desea sobreescribir los datos?", "Autor ya existente",
@@ -153,7 +157,7 @@ public class VentanaAutor extends javax.swing.JFrame {
             if (resp == JOptionPane.YES_OPTION){
                 JOptionPane.showMessageDialog(null, "Se sobreescribirá los datos del Autor.", "Autor ya existente",
                         JOptionPane.INFORMATION_MESSAGE);
-                modelo.registrarAutor(nombre.getText(), nacionalidad.getText());
+                modelo.registrarAutor(nombre.getText(), nacionalidad.getText(), listaGeneros);
                 recargarTabla();
             } else {
                 JOptionPane.showMessageDialog(null, "No se sobreescribirán los datos.", "Autor ya existente",
