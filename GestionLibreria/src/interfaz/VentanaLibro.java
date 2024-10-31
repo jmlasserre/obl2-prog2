@@ -1,4 +1,4 @@
-// Leandro Chiurchiu (286847) y Juan Martí­n Lasserre (289139)
+// Leandro Chiurchiu (286847) y Juan MartÃ­Â­n Lasserre (289139)
 // M2B
 package interfaz;
 import dominio.*;
@@ -16,6 +16,7 @@ public class VentanaLibro extends javax.swing.JFrame {
     public void recargarTabla(){
         listGen.setListData(modelo.getNombresGenero().toArray());
         listEdit.setListData(modelo.getNombresEditorial().toArray());
+        listAut.setListData(modelo.getNombresAutorGen().toArray());
     }
 
     @SuppressWarnings("unchecked")
@@ -94,6 +95,11 @@ public class VentanaLibro extends javax.swing.JFrame {
         });
 
         jButton1.setText("Cancelar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Registrar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -134,11 +140,6 @@ public class VentanaLibro extends javax.swing.JFrame {
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(6, 6, 6)
                         .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(121, 121, 121)
-                        .addComponent(jButton1))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addGap(15, 15, 15)
@@ -208,7 +209,7 @@ public class VentanaLibro extends javax.swing.JFrame {
                         .addComponent(jLabel8))
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
                 .addContainerGap(95, Short.MAX_VALUE))
@@ -228,6 +229,10 @@ public class VentanaLibro extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
   
     Sistema modelo;

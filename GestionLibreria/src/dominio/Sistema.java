@@ -51,6 +51,10 @@ public class Sistema {
         this.listaAutores.add(aut);
     }
     
+    public void GeneroXAutor(String nombre){
+        
+    }
+    
     public Boolean autorEsUnico(String nombre){
         Boolean b = true;
         for (Autor aut : this.listaAutores){
