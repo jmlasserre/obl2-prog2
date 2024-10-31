@@ -3,9 +3,7 @@ import dominio.*;
 import java.util.*;
 import javax.swing.*;
 
-
 public class VentanaLibro extends javax.swing.JFrame {
-
     
     public VentanaLibro(Sistema sys) {
         modelo = sys;
@@ -18,7 +16,6 @@ public class VentanaLibro extends javax.swing.JFrame {
         listEdit.setListData(modelo.getNombresEditorial().toArray());
     }
 
-   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

@@ -21,21 +21,21 @@ public class Sistema {
         this.listaEditoriales.add(ed);
     }
     
-    public ArrayList<Editorial> getEditorial(){
-        return listaEditoriales;
-    }
-    
     public ArrayList<String> getNombresEditorial(){
         ArrayList<String> listaNombresEditoriales = new ArrayList<>();
-        for(Editorial edit : this.listaEditoriales){
+        for (Editorial edit: this.listaEditoriales){
             listaNombresEditoriales.add(edit.getNombre());
         }
         return listaNombresEditoriales;
     }
     
-    public void registrarAutor(String nombre, String nacionalidad){
+    public ArrayList<Editorial> getEditorial(){
+        return listaEditoriales;
+    }
+    
+    public void registrarAutor(String nombre, String nacionalidad, ArrayList<String> listaGeneros){
         autores.put(nombre, nacionalidad);
-        Autor aut = new Autor(nombre, nacionalidad);
+        Autor aut = new Autor(nombre, nacionalidad, listaGeneros);
         this.listaAutores.add(aut);
     }
     
@@ -57,8 +57,6 @@ public class Sistema {
         return new ArrayList<String>(autores.values());
     }
    
-    
-    
     public Boolean esUnicaEditorial(String nombre){
         Boolean b = true;
         for (Editorial editorial : this.listaEditoriales){
@@ -68,17 +66,13 @@ public class Sistema {
         }
         return b;
     }
-    
-  
-    
+      
     public void agregarGenero(String nombre, String desc){
         gens.put(nombre, desc);
         Genero gen = new Genero(nombre, desc);
         this.listaGeneros.add(gen);
     }
-    
-  
-    
+      
     public Boolean generoEsUnico(String nombre){
         Boolean b = true;
         for (Genero g : this.listaGeneros){

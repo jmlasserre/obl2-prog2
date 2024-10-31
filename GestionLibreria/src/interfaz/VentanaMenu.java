@@ -26,7 +26,7 @@ public class VentanaMenu extends javax.swing.JFrame {
         consVentas = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Gestión de Librerías - Realizado por Leandro Chiurchiu (286847) y Juan Martín Lasserre (289139)");
+        setTitle("Gestiï¿½n de Librerï¿½as - Realizado por Leandro Chiurchiu (286847) y Juan Martï¿½n Lasserre (289139)");
 
         jMenu1.setText("Registros");
 
@@ -55,11 +55,6 @@ public class VentanaMenu extends javax.swing.JFrame {
         jMenu1.add(regAutores);
 
         regLibros.setText("Libros");
-        regLibros.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                regLibrosActionPerformed(evt);
-            }
-        });
         jMenu1.add(regLibros);
 
         jMenuBar1.add(jMenu1);
@@ -77,6 +72,11 @@ public class VentanaMenu extends javax.swing.JFrame {
         jMenu3.setText("Consultas");
 
         consLibros.setText("Consultar Libros");
+        consLibros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consLibrosActionPerformed(evt);
+            }
+        });
         jMenu3.add(consLibros);
 
         consVentas.setText("Consultar Ventas");
@@ -124,7 +124,11 @@ public class VentanaMenu extends javax.swing.JFrame {
         vent.setVisible(true);
     }//GEN-LAST:event_regGenerosActionPerformed
 
-    private void regLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regLibrosActionPerformed
+    private void consLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consLibrosActionPerformed
+        VentanaConsultaLibros vent = new VentanaConsultaLibros(modelo);
+        vent.setVisible(true);
+    }//GEN-LAST:event_consLibrosActionPerformed
+    private void regLibrosActionPerformed(java.awt.event.ActionEvent evt){
         VentanaLibro vent = new VentanaLibro(modelo);
         vent.setVisible(true);
         //HOLA
