@@ -26,7 +26,7 @@ public class VentanaMenu extends javax.swing.JFrame {
         consVentas = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Gestiï¿½n de Librerï¿½as - Realizado por Leandro Chiurchiu (286847) y Juan Martï¿½n Lasserre (289139)");
+        setTitle("Gestión de Librerías - Realizado por Leandro Chiurchiu (286847) y Juan Martín Lasserre (289139)");
 
         jMenu1.setText("Registros");
 
@@ -55,6 +55,11 @@ public class VentanaMenu extends javax.swing.JFrame {
         jMenu1.add(regAutores);
 
         regLibros.setText("Libros");
+        regLibros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regLibrosActionPerformed(evt);
+            }
+        });
         jMenu1.add(regLibros);
 
         jMenuBar1.add(jMenu1);
@@ -128,11 +133,12 @@ public class VentanaMenu extends javax.swing.JFrame {
         VentanaConsultaLibros vent = new VentanaConsultaLibros(modelo);
         vent.setVisible(true);
     }//GEN-LAST:event_consLibrosActionPerformed
-    private void regLibrosActionPerformed(java.awt.event.ActionEvent evt){
+
+    private void regLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regLibrosActionPerformed
         VentanaLibro vent = new VentanaLibro(modelo);
         vent.setVisible(true);
-        //HOLA
     }//GEN-LAST:event_regLibrosActionPerformed
+                                 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
