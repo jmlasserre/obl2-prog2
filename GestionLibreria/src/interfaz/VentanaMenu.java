@@ -137,7 +137,8 @@ public class VentanaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_consLibrosActionPerformed
 
     private void regLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regLibrosActionPerformed
-
+        VentanaLibro vent = new VentanaLibro(modelo);
+        vent.setVisible(true);
     }//GEN-LAST:event_regLibrosActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
