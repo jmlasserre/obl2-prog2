@@ -8,8 +8,17 @@ public class VentanaEditorial extends javax.swing.JFrame {
     public VentanaEditorial(Sistema sys) {
         modelo = sys;
         initComponents();
-        tabla = (DefaultTableModel) editorialTable.getModel();
+        tabla = (DefaultTableModel)editorialTable.getModel();
+        recargarTabla();
     }
+    
+    public void recargarTabla(){
+        for(Editorial editorial : modelo.getEditorial()){
+            String[] fila = {editorial.getNombre() , editorial.getPais()};
+            tabla.addRow(fila);
+        }
+    }
+   
  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -92,7 +101,7 @@ public class VentanaEditorial extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cancelarButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(registrarButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 563, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 562, Short.MAX_VALUE))
                 .addGap(73, 73, 73))
         );
         layout.setVerticalGroup(

@@ -12,6 +12,7 @@ public class Sistema {
     private ArrayList<Autor> listaAutores = new ArrayList<>();
     
     private HashMap<String, String> gens = new HashMap();
+    private HashMap<String, String> autores = new HashMap();
     
     // separar en dos packages, uno para las ventanas y otro para las clases individuales
     // tres packages también: uno para el main, otro para las ventanas y el último para las clases del UML
@@ -19,14 +20,36 @@ public class Sistema {
         Editorial ed = new Editorial(nombre, pais);
         this.listaEditoriales.add(ed);
     }
-   
-    public void agregarGenero(Genero gen){
-        listaGeneros.add(gen);
+    
+    public ArrayList<Editorial> getEditorial(){
+        return listaEditoriales;
     }
     
-    public void agregarAutor (Autor aut){
-        listaAutores.add(aut);
+    public void registrarAutor(String nombre, String nacionalidad){
+        autores.put(nombre, nacionalidad);
+        Autor aut = new Autor(nombre, nacionalidad);
+        this.listaAutores.add(aut);
     }
+    
+    public Boolean autorEsUnico(String nombre){
+        Boolean b = true;
+        for (Autor aut : this.listaAutores){
+            if (aut.getNombre().trim().equalsIgnoreCase(nombre)){
+                b = false;
+            }
+        }
+        return b;
+    }
+    
+     public ArrayList<String> getNombresAutor(){
+        return new ArrayList<String>(autores.keySet());
+    }
+    
+    public ArrayList<String> getNacionAutor(){
+        return new ArrayList<String>(autores.values());
+    }
+   
+    
     
     public Boolean esUnicaEditorial(String nombre){
         Boolean b = true;
@@ -37,13 +60,16 @@ public class Sistema {
         }
         return b;
     }
-   
+    
+  
     
     public void agregarGenero(String nombre, String desc){
         gens.put(nombre, desc);
         Genero gen = new Genero(nombre, desc);
         this.listaGeneros.add(gen);
     }
+    
+  
     
     public Boolean generoEsUnico(String nombre){
         Boolean b = true;

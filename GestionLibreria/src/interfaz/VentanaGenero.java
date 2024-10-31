@@ -8,6 +8,8 @@ public class VentanaGenero extends javax.swing.JFrame {
     public VentanaGenero(Sistema sys) {
         modelo = sys;
         initComponents();
+        recargarTabla();
+      
     }
     
     public void recargarTabla(){
@@ -46,6 +48,11 @@ public class VentanaGenero extends javax.swing.JFrame {
         descTextField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         descTextField.setToolTipText("");
         descTextField.setAutoscrolls(false);
+        descTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                descTextFieldActionPerformed(evt);
+            }
+        });
 
         nombre.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         nombre.setText("Nombre");
@@ -99,16 +106,17 @@ public class VentanaGenero extends javax.swing.JFrame {
                 .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nombreTextField))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(nombreTextField)
+                                .addGap(64, 64, 64))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(genero, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(descTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(64, 64, 64)
+                                .addGap(18, 18, 18)
+                                .addComponent(descTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(58, 58, 58)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(cancelarButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(registrarGeneroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -173,12 +181,18 @@ public class VentanaGenero extends javax.swing.JFrame {
                         JOptionPane.INFORMATION_MESSAGE);
             }
         }
+        nombreTextField.setText("");
+        descTextField.setText("");
 
     }//GEN-LAST:event_registrarGeneroButtonActionPerformed
 
     private void cancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButtonActionPerformed
         this.dispose();
     }//GEN-LAST:event_cancelarButtonActionPerformed
+
+    private void descTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_descTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelarButton;

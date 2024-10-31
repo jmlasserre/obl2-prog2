@@ -101,7 +101,8 @@ public class VentanaMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void regAutoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regAutoresActionPerformed
-        // TODO add your handling code here:
+        VentanaAutor vent = new VentanaAutor(modelo);
+        vent.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_regAutoresActionPerformed
 
     private void consVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consVentasActionPerformed
