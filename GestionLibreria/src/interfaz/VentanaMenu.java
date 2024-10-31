@@ -26,7 +26,7 @@ public class VentanaMenu extends javax.swing.JFrame {
         consVentas = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Gestión de Librerías - Realizado por Leandro Chiurchiu (286847) y Juan Martín Lasserre (289139)");
+        setTitle("Gestiï¿½n de Librerï¿½as - Realizado por Leandro Chiurchiu (286847) y Juan Martï¿½n Lasserre (289139)");
 
         jMenu1.setText("Registros");
 
@@ -131,7 +131,9 @@ public class VentanaMenu extends javax.swing.JFrame {
     private void regLibrosActionPerformed(java.awt.event.ActionEvent evt){
         VentanaLibro vent = new VentanaLibro(modelo);
         vent.setVisible(true);
-    }
+        //HOLA
+    }//GEN-LAST:event_regLibrosActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem consLibros;
