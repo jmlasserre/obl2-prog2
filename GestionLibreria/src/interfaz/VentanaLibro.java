@@ -1,4 +1,4 @@
-// Leandro Chiurchiu (286847) y Juan Martí­n Lasserre (289139)
+// Leandro Chiurchiu (286847) y Juan MartÃ­Â­n Lasserre (289139)
 // M2B
 package interfaz;
 import dominio.*;
@@ -156,7 +156,7 @@ public class VentanaLibro extends javax.swing.JFrame {
                             .addGap(84, 84, 84)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(32, 32, 32))))
-                .addGap(70, 142, Short.MAX_VALUE))
+                .addGap(72, 128, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -164,13 +164,7 @@ public class VentanaLibro extends javax.swing.JFrame {
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3)
-                .addGap(72, 72, 72))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(169, 169, 169)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(178, 178, 178))
+                .addGap(75, 75, 75))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,10 +212,10 @@ public class VentanaLibro extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton1))
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
-        setBounds(0, 0, 691, 469);
+        setBounds(0, 0, 679, 507);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
