@@ -1,3 +1,5 @@
+// Leandro Chiurchiu (286847) y Juan Martí­n Lasserre (289139)
+// M2B
 package dominio;
 import dominio.Genero;
 import java.util.*;
@@ -22,6 +24,10 @@ public class Autor {
             }
         }
         return b;
+    }
+    
+    public String[] getGeneros(){
+        return (String[]) this.generos.toArray();
     }
     
     public void setGeneros(ArrayList<String> listaGeneros){

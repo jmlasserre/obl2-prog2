@@ -1,3 +1,5 @@
+// Leandro Chiurchiu (286847) y Juan Martí­n Lasserre (289139)
+// M2B
 package interfaz;
 import dominio.*;
 import java.util.*;
@@ -9,7 +11,6 @@ public class VentanaGenero extends javax.swing.JFrame {
         modelo = sys;
         initComponents();
         recargarTabla();
-      
     }
     
     public void recargarTabla(){
