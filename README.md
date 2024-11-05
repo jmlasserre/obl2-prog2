@@ -9,3 +9,4 @@ Consigna: Una importante librería de plaza necesita automatizar la gestión de 
 - [ ] Implementar java.beans o java.Observable/java.Observer para sincronizar ventanas
 - [ ] Resolver "subir foto" de libro
 - [ ] Resolver exportación de .csv
+- [ ] Try/catch
